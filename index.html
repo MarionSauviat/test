@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Aframe</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="skate" src="assets/Skateboard.glb"></a-asset-item>
+        </a-assets>
+        <a-assets>
+            <a-asset-item id="skateparc" src="assets/Modular Skate Park kit.glb"></a-asset-item>
+        </a-assets>
+        <a-assets>
+            <a-asset-item id="monstre" src="assets/Colossus pre Tilt Brush.glb"></a-asset-item>
+        </a-assets>
+        
+        <a-entity gltf-model="#monstre" position="-5 1.5 4" animation="property: position; to: 0 1.5 4; dir:alternate; dur: 2000; easing: linear; loop: true"></a-entity>
+        <a-entity gltf-model="#skate" position="0 0 -1" animation="property: position; to: 0 0 1; dir:alternate; dur: 2000; easing: linear; loop: true"></a-entity>
+        <a-entity gltf-model="#skateparc" position="-9.35 0.1 0" ></a-entity>
+        <a-image src="assets/test.jpg" position="0 1.25 2"></a-image>
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+            <a-sphere position="0 1.25 .75"  radius=".25" color="yellow"></a-sphere>
+            <a-sphere position="0 1.25 -0" radius=".5" color="#EF2D5E"></a-sphere>
+
+        </a-entity>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="12" height="12" color="#7BC8A4"></a-plane>
+      <a-sky src="assets/fond.jpg"></a-sky>
+    </a-scene>
+  </body>
+</html>
